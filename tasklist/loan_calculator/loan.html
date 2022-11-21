@@ -9,8 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
         crossorigin="anonymous">
-
     <title>Loan Calculator</title>
+    <style>
+        #loading {
+            display: none;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #results {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-dark">
@@ -40,11 +53,11 @@
                         </div>
                     </form>
                     <!-- Loader -->
-                    <!-- <div id="loading">
-                                        <img src="img/loading.gif" alt="loading">
-                                    </div> -->
+                    <div id="loading">
+                        <img src="img/loading.gif" alt="loading">
+                    </div>
                     <!-- Result -->
-                    <div id="results pt-4">
+                    <div id="results" class="pt-4">
                         <h5>Result</h5>
                         <div class="form-group">
                             <div class="input-group">
