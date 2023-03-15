@@ -63,17 +63,18 @@ function getJokes(e) {
     //Create an XHR object
     const xhr = new XMLHttpRequest;
     //open
-    xhr.open('GET', `https://api.chucknorris.io/jokes/search?query=${number}`, true);
+    //Url is suppose to get number from the input and add to the url to get some numbers of jokes
+    xhr.open('GET', `https://api.chucknorris.io/jokes/${number}`, true);
     //load
     xhr.onload = function () {
         if (this.status === 200) {
             console.log(this.responseText)
             const response = JSON.parse(this.responseText);
             let output = '';
-            if (response.type === '200') {
+            if (response.type === 'success') {
                 response.value.forEach(function (joke) {
                     console.log(this.response)
-                    output += `<li>${joke.joke}</li>`;
+                    output += `<li>${random}</li>`;
                 });
                 console.log(this.response)
             } else {
